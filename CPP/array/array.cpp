@@ -1,14 +1,34 @@
-#include<iostream>
-using namespace std;
-int main()
-{
-    int n[5];
-    cout << n <<endl;
-    int m[5]={1,2,3,4,5};
-    int i;
-    for(i=0;i<5;i++){
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter no of element "<<endl;
+//     cin>>n;
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+//     for(int i=0;i<n;i++){
+//     cout << arr[i] <<" ";
+//     }
+// }
 
-    
-    cout << n[i] <<" ";
-    }
+#include<iostream>
+#include<climits>
+using namespace std;
+int getminElement(int arr[], int size){
+int min = INT_MAX;
+for(int i = 0; i < size; i++){
+if(arr[i] < min){
+min = arr[i];
+}
+}
+return min;
+}
+int main(){
+    int arr[6]={3,5,2,7,8,1};
+    int size=6;
+
+    cout<<getminElement(arr,size);
 }
