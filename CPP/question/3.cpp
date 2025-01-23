@@ -70,7 +70,7 @@ using namespace std;
 int main() {
     int n;
     cin>>n;
-    int arr[5]; 
+    int arr[n]; 
     int totalSum = 0; 
     int minValue, maxValue;
 
