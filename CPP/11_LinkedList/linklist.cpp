@@ -39,14 +39,17 @@ void display( Node *head) {
     Node *temp = head;
     while(temp!=NULL)
     {
-        cout<<temp->data;
-        temp=temp->next;
+        cout<<temp->data<<"->";
+        temp = temp->next;
+    
 
     }
+    cout<<"NULL"<<endl;
 }
 int main(){
     Node *head = NULL;
     insertAtHead(head,1);
+    insertAtHead(head,2);
 
-
+    display(head);
 }
