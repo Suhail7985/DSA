@@ -62,6 +62,9 @@ void deleteATHead(Node* &head){
     }
 
     void display(Node *head){
+        if (head==NULL){
+            return;
+        }
         Node *temp = head;
         do{
             cout<<temp->data<<"->";
