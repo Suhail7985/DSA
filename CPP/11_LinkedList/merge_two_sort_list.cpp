@@ -30,6 +30,7 @@ void display(Node *head){
     }
     cout<<endl;
 }
+void merge
 int main(){
     Node *head1=NULL;
     Node *head2=NULL;
