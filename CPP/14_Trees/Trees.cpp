@@ -8,6 +8,11 @@
 //atmost 2 children for a node known as binary tree
 //depth=no of edges in the path from root to node
 //height=no of edges in the longest path from node to leaf
+//preorder= root left right
+//inorder=left root right
+//postorder=left right root
+//maximum nodes at a level=2^h
+//level order traversal=level by level traversal
 #include <iostream>
 using namespace std;
 class Node
@@ -23,6 +28,38 @@ public:
         right = NULL;
     }
 };
+
+    void preorder(Node *root){
+        if(root==NULL){
+            return;
+        }
+        cout<<root->data<<" ";
+        preorder(root->left);
+        preorder(root->right);
+
+    }
+    void inoreder(Node *root){
+        if(root==NULL){
+            return;
+        }
+        inoreder(root->left);
+        cout<<root->data<<" ";
+        inoreder(root->right);
+    }
+
+    void postorder(Node *root){
+        if(root==NULL){
+            return;
+
+        }
+        postorder(root->left);
+        postorder(root->right);
+        cout<<root->data<<" ";
+
+    }
+
+
+
 int main()
 {
     Node *root = new Node(1);
