@@ -15,6 +15,7 @@ class Node{
     }
 
 };
+//search in bst?
 Node* searchinbst( Node* root,int key){
     if(root==NULL){
         return NULL;
@@ -26,6 +27,20 @@ Node* searchinbst( Node* root,int key){
         return searchinbst(root->left,key);
     }
 }
+//min value of bst?
+Node* minvalue( Node* root){
+    if(root==NULL){
+        return NULL;
+    }
+    while( temp->left!=NULL){
+    if( root->left!=NULL){
+        root=root->value
+    }
+
+}
+
+return root->data;
+}
 int main(){
     Node* root=new Node(50);
     root->left=new Node(30);
@@ -35,6 +50,8 @@ int main(){
     root->right->left=new Node(60);
     root->right->right=new Node(80);
     Node* temp=searchinbst(root,40);
+
+
     
 }
 
