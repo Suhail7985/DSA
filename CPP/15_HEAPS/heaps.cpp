@@ -8,7 +8,7 @@
 //right child is on 2*i+1 node
 //parent i/2
 
-#include<bts/stdc++.h>
+#include<iostream>
 using namespace std;
 class Heap{
     public:
@@ -29,6 +29,32 @@ class Heap{
             if(arr[parent]<arr[index]){
                 swap(arr[parent], arr[index]);
                 index=parent;
+            }
+            else{
+                return;
+            }
+        }
+        void deleteElement(){
+
+            if(size==0){
+                return;
+            }
+            arr[1]==arr[size];
+            size--;
+            int i=1;
+            while(i<size){
+                int leftIdx=2*i;
+                int rightIdx=2*i+1;
+                
+                if(leftIdx<size && arr[leftIdx]>arr[i]){
+                    swap(arr[i],arr[leftIdx]);
+                    i=leftIdx;
+            }
+            else if (rightIdx<size && arr[i]<arr[rightIdx]){
+                swap(arr[i],arr[rightIdx]);
+                i=rightIdx;
+
+
             }
             else{
                 return;
