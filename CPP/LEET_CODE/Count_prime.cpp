@@ -18,5 +18,6 @@ int countPrime(int n){
 int main(){
     int n=10;
     countPrime(10);
+    cout<<n;
     cout<<"Enter a number: ";
 }
